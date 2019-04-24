@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<title>Medkit - Search Page</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/search.css" rel="stylesheet">
+
+	<link href="css/customfont.css" rel="stylesheet">
+	<link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top" id="mainNav">
+		<div class="container-fluid d-flex justify-content-between">
+			
+			 <button class="btn btn-dark" id="menu-toggle">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#page-top"><i class="fas fa-medkit"></i> Medkit</a>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Log in</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="d-flex" id="wrapper">
+		
+		<!-- Sidebar -->
+		<div class="bg-light border-right" id="sidebar-wrapper">
+			<ul class="nav nav-tabs rounded d-flex" id="sidebar" role="tablist">
+				<li class="nav-item flex-fill text-center">
+					<a class="nav-link active" id="medicine-tab" data-toggle="tab" href="#medicine" role="tab" aria-controls="medicine" aria-selected="true">Medicines</a>
+				</li>
+				<li class="nav-item flex-fill text-center">
+					<a class="nav-link" id="pharmacy-tab" data-toggle="tab" href="#pharmacy" role="tab" aria-controls="pharmacy" aria-selected="false">Pharmacy</a>
+				</li>
+			</ul>
+			
+			<div class="tab-content mt-3 mx-3" id="sidebarContent">
+				<div class="tab-pane fade show active" id="medicine" role="tabpanel" aria-labelledby="medicine-tab">
+					<form>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text">Keyword</label>
+							</div>
+							<input type="text" class="form-control" arial-label="Search">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="category">Category</label>
+							</div>
+							<select class="custom-select" id="category">
+								<option selected="selected" disabled="disabled" value="NA">Choose...</option>
+								<option value="1">ID</option>
+								<option value="2">Name</option>
+								<option value="3">Utility</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="sort-method">Sort by</label>
+							</div>
+							<select class="custom-select" id="sort-method">
+								<option selected="selected" disabled="disabled" value="NA">Choose...</option>
+								<option value="1">Alphabet</option>
+								<option value="2">Popularity</option>
+								<option value="3">Mean Price</option>
+							</select>
+						</div>
+						<div class="d-flex justify-content-center">
+							<button type="submit" class ="btn btn-dark btn-lg">Tìm kiếm</button>
+						</div>
+					</form>
+				</div>
+				<div class="tab-pane fade" id="pharmacy" role="tabpanel" aria-labelledby="pharmacy-tab">
+					<form>
+						<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Pharmacy name</span>
+					</div>
+					<input type="text" class="form-control" arial-label="Pharmacy-name">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Drug name</span>
+					</div>
+					<input type="text" class="form-control" arial-label="Drug-name">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">ATC</span>
+					</div>
+					<input type="text" class="form-control" arial-label="ATC">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Area</span>
+					</div>
+					<input type="text" class="form-control" arial-label="Area">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Distance (km)</span>
+					</div>
+					<input type="text" class="form-control" arial-label="Distance">
+				</div>
+				          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="category">Sort by</label>
+              </div>
+              <select class="custom-select" id="category">
+                <option selected>Choose...</option>
+                <option value="1">Pharmacy Name</option>
+                <option value="2">Drug's price</option>
+                <option value="3">Distance</option>
+              </select>
+            </div>
+				<div class="d-flex justify-content-center">
+					<a class="btn btn-dark btn-lg mr-3" href="#" role="button">Search </a>
+					
+				</div>
+				
+			</form>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container">
+			<h1 class="mt-4">Simple Sidebar</h1>
+			<p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+			<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+		</div>
+		<!-- /#page-content-wrapper -->
+	</div>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="js/jquery/jquery.easing.min.js"></script>
+	<script>
+		document.getElementById("wrapper").style.paddingTop = document.getElementById("mainNav").clientHeight + "px";
+		
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+
+</body>
+
+</html>
